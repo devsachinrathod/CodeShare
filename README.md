@@ -4,6 +4,10 @@ Share code securely with a simple OTP. No accounts required.
 
 ## How it works
 
+#docker compose up -d
+#npx prisma db push
+#npm run dev
+
 1. **Sender** pastes code → generates a 6-digit OTP → sends the OTP via WhatsApp, Slack, SMS, etc.
 2. **Receiver** enters the OTP → views and copies the decrypted code.
 3. OTPs expire in **10 minutes** and are **single-use**.

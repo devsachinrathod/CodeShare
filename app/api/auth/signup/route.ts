@@ -48,13 +48,13 @@ export async function POST(request: Request) {
       );
     }
 
-    const passwordHash = await hashPassword(password);
+   
 
     const user = await prisma.user.create({
       data: {
         name,
         email,
-        passwordHash,
+        password,
       },
       select: {
         id: true,
