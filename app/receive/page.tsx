@@ -89,7 +89,7 @@ export default function ReceivePage() {
       LANGUAGE_LABELS[result.language as Language] ?? result.language;
 
     return (
-      <div className="mx-auto w-full animate-fade-up py-2">
+      <div className="mx-auto w-full max-w-2xl px-4 py-8 sm:px-6 animate-fade-up">
         <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
           Code Ready
         </h1>
@@ -152,7 +152,7 @@ export default function ReceivePage() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-md animate-fade-up py-4">
+    <div className="mx-auto w-full max-w-md px-4 py-8 sm:px-6 animate-fade-up">
       <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
         Receive Code
       </h1>

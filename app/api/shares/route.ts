@@ -4,6 +4,7 @@ import { encrypt } from "@/lib/encryption";
 import { generateOtp, hashOtp, OTP_EXPIRY_MINUTES } from "@/lib/otp";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { createShareSchema } from "@/lib/validation";
+import { getCurrentUser } from "@/lib/auth";
 
 export const runtime = "nodejs";
 
@@ -36,6 +37,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: message }, { status: 400 });
     }
 
+    const user = await getCurrentUser();
     const { code, language, title } = parsed.data;
     const encryptedCode = encrypt(code);
     const expiresAt = new Date(Date.now() + OTP_EXPIRY_MINUTES * 60 * 1000);
@@ -53,6 +55,7 @@ export async function POST(request: Request) {
             language,
             title,
             expiresAt,
+            userId: user?.id ?? null,
           },
         });
         break;
