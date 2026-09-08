@@ -71,7 +71,7 @@ export default function SendPage() {
 
   if (result) {
     return (
-      <div className="mx-auto w-full max-w-md animate-fade-up py-4 text-center">
+      <div className="mx-auto w-full max-w-md px-4 py-8 sm:px-6 animate-fade-up text-center">
         <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
           Your code is ready
         </h1>
@@ -104,7 +104,7 @@ export default function SendPage() {
   }
 
   return (
-    <div className="mx-auto w-full animate-fade-up py-2">
+    <div className="mx-auto w-full max-w-2xl px-4 py-8 sm:px-6 animate-fade-up">
       <h1 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
         Share Code
       </h1>
