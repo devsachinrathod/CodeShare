@@ -13,6 +13,7 @@
     "smoke": "tsx scripts/smoke-crypto.ts"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
     "@prisma/client": "^6.5.0",
     "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",

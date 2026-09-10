@@ -106,7 +106,12 @@ export default function ReceivePage() {
         </div>
 
         <div className="mt-6">
-          <CodeEditor value={result.code} readOnly aria-label="Shared code" />
+          <CodeEditor
+            value={result.code}
+            language={result.language}
+            readOnly
+            aria-label="Shared code"
+          />
         </div>
 
         <div className="mt-6 space-y-3">

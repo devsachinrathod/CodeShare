@@ -150,6 +150,7 @@ export default function SendPage() {
             id="code"
             value={code}
             onChange={setCode}
+            language={language}
             placeholder="Paste or write your code here"
           />
         </div>
